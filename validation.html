@@ -98,7 +98,10 @@
             seterror("name", "*Length of name cannot be zero!");
             returnval = false;
         }
-
+        if(!name.match(/^[A-Za-z0-9]+$/)){  // /^[^A-Za-z0-9]+$/ - (for special characters)
+            seterror("name", "*Only alphabets are allowed!");
+            returnval = false;
+        }
         var email = document.forms['myForm']["femail"].value;
         if (email.length>15){
             seterror("email", "*Email length is too long");
@@ -132,3 +135,55 @@
 </script>
 
 </html>
+
+<!-- 
+    function isLeapYear(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+}
+
+function isValidDate(dateString) {
+  const dateParts = dateString.split('-');
+  if (dateParts.length !== 3) {
+    return false;
+  }
+
+  const year = parseInt(dateParts[0]);
+  const month = parseInt(dateParts[1]);
+  const day = parseInt(dateParts[2]);
+
+  if (isNaN(year) || isNaN(month) || isNaN(day)) {
+    return false;
+  }
+
+  if (month < 1 || month > 12 || day < 1) {
+    return false;
+  }
+
+  const daysInMonth = [
+    31, // January
+    isLeapYear(year) ? 29 : 28, // February
+    31, // March
+    30, // April
+    31, // May
+    30, // June
+    31, // July
+    31, // August
+    30, // September
+    31, // October
+    30, // November
+    31 // December
+  ];
+
+  return day <= daysInMonth[month - 1];
+}
+
+// Example usage
+const dateString = '2023-02-29';
+
+if (isValidDate(dateString)) {
+  console.log('Valid date');
+} else {
+  console.log('Invalid date');
+}
+
+ -->
