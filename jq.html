@@ -18,3 +18,96 @@
   <!-- Your custom scripts using jQuery go here -->
 </body>
 </html>
+<!-- 
+
+$(document).ready(function() {
+  // Your jQuery code goes here
+});
+$('p') // Selects all <p> elements
+
+$('#myElement') // Selects the element with the ID "myElement"
+$('.myClass') // Selects all elements with the class "myClass"
+$('#myElement').text('New text'); // Sets the text content of the element with ID "myElement"
+$('#myElement').addClass('newClass'); // Adds the class "newClass" to the element
+$('#myElement').removeClass('oldClass'); // Removes the class "oldClass" from the element
+$('#myLink').attr('href', 'https://example.com'); // Sets the "href" attribute of the link
+$('#myButton').click(function() {
+  // Code to execute when the button is clicked
+});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Page Title -->
+  <title>jQuery Methods Example</title>
+
+  <style>
+    /* CSS for demonstration purposes */
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="myDiv">Hello, World!</div>
+
+  <script>
+    $(document).ready(function() {
+      // Manipulating HTML content
+      var htmlContent = $('#myDiv').html();
+      console.log(htmlContent); // Output: Hello, World!
+      
+      $('#myDiv').append(' - New content');
+      $('#myDiv').prepend('Prefix - ');
+
+      // Manipulating CSS
+      $('#myDiv').css('color', 'blue');
+      $('#myDiv').addClass('highlight');
+
+      // Working with attributes and properties
+      var linkHref = $('#myLink').attr('href');
+      console.log(linkHref); // Output: https://example.com
+
+      $('#myLink').prop('disabled', true);
+
+      // Traversing the DOM
+      var parentElement = $('#myDiv').parent();
+      console.log(parentElement); // Output: <body>...</body>
+
+      var childElements = $('#myDiv').children();
+      console.log(childElements); // Output: <span>...</span>
+
+      // Event Handling
+      $('#myButton').click(function() {
+        alert('Button clicked!');
+      });
+
+      // Animations
+      $('#myDiv').hide();
+      $('#myDiv').fadeIn(1000);
+      $('#myDiv').slideUp();
+
+      // AJAX
+      $.ajax({
+        url: 'https://api.example.com/data',
+        method: 'GET',
+        success: function(response) {
+          console.log(response);
+        },
+        error: function(error) {
+          console.log(error);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+-->
